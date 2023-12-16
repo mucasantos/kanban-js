@@ -51,7 +51,7 @@ export default class Item {
         range.selectNode(document.body)
 
         return range.createContextualFragment(`
-        <div class="kanban__item">
+        <div class="kanban__item" draggable="true">
             <div class=kanban__item-input contenteditable> </div>
             <i class="fa fa-trash icon"></i>
         </div>
