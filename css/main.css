@@ -1,3 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.form {
+    display: flex;
+    margin: 20px;
+    width: 50%;
+}
+
+input[type=text] {
+    padding: 12px 26px;
+    margin: 4px 2px;
+    box-sizing: border-box;
+    width: 80%;
+}
+
+.button {
+    background-color: white;
+    color: #008CBA;
+    border: 1px solid #008CBA;
+    padding: 12px 18px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    float: right;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
 .kanban {
     display: flex;
     padding: 30px;
@@ -30,7 +68,10 @@
 
 .kanban__item {
     display: flex;
+    border: none;
 }
+
+
 
 .icon {
     color: red;
@@ -51,10 +92,12 @@
     background: white;
     border-radius: 5px;
     cursor: pointer;
+    outline: 0px solid transparent;
+
 }
 
 .kanban__dropzone {
-    height: 10px;
+    height: 20px;
     transition: background 0.15s, height 0.15s;
 }
 
