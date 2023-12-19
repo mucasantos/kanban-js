@@ -1,118 +1,113 @@
 * {
-    margin: 0;
     padding: 0;
-}
-
-.form {
-    display: flex;
-    margin: 20px;
-    width: 50%;
-}
-
-input[type=text] {
-    padding: 12px 26px;
-    margin: 4px 2px;
+    margin: 0;
     box-sizing: border-box;
-    width: 80%;
-}
-
-.button {
-    background-color: white;
-    color: #008CBA;
-    border: 1px solid #008CBA;
-    padding: 12px 18px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    float: right;
-    border-radius: 5px;
-}
-
-.button:hover {
-    background-color: #008CBA;
-    color: white;
-}
-
-.kanban {
-    display: flex;
-    padding: 30px;
-    border-radius: 5px;
-}
-
-.kanban * {
     font-family: sans-serif;
+
+    scrollbar-width: none;
 }
 
-.kanban__column {
-    flex: 1;
-    background-color: wheat;
-    padding: 15px;
-    border-radius: 15px;
-
+*::-webkit-scrollbar {
+    display: none;
 }
 
-.kanban__column:not(:last-child) {
-    margin-right: 10px;
-}
-
-.kanban__column-title {
-    margin-bottom: 20px;
-    font-size: 20px;
-    color: white;
-    user-select: none;
-    text-align: center;
-}
-
-.kanban__item {
-    display: flex;
-    border: none;
-}
-
-
-
-.icon {
-    color: red;
-    background-color: white;
-    padding-top: 2px;
-    margin-bottom: 5px;
-    padding: 2px;
-    margin-left: -5px;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.kanban__item-input {
-    padding: 10px 15px;
-    margin-bottom: 5px;
+.board {
     width: 100%;
-    box-sizing: border-box;
+    height: 100vh;
+    overflow: scroll;
+
+    background-image: url("https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=1939&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+}
+
+/* ----- FORM ---- */
+
+#todo-form {
+    padding: 32px 32px 0;
+}
+
+#todo-form input {
+    padding: 12px;
+    margin-right: 12px;
+    width: 225px;
+
+    border-radius: 4px;
+    border: none;
+
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, .25);
     background: white;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: 0px solid transparent;
 
+    font-size: 14px;
+    outline: none;
 }
 
-.kanban__dropzone {
-    height: 20px;
-    transition: background 0.15s, height 0.15s;
-}
+#todo-form button {
+    padding: 12px 32px;
 
-.kanban__dropzone--active {
-    height: 20px;
-    background: rgba(0, 0, 0, 0.25);
-}
-
-.kanban__add-item {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: white;
-    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
     border: none;
-    border-radius: 5px;
+
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, .25);
+    background: #ffffff;
+    color: black;
+
+    font-weight: bold;
+    font-size: 14px;
     cursor: pointer;
+}
+
+/* ----- Board ---- */
+
+.lanes {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 16px;
+
+    padding: 24px 32px;
+
+    overflow: scroll;
+    height: 100%;
+}
+
+.heading {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.swim-lane {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    background: #f4f4f4;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, .25);
+
+    padding: 12px;
+    border-radius: 4px;
+    width: 225px;
+    min-height: 120px;
+
+    flex-shrink: 0;
+}
+
+.task {
+    background: white;
+    color: black;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, .25);
+
+    padding: 12px;
+    border-radius: 4px;
+
+    font-size: 16px;
+    cursor: move;
+}
+
+.is-dragging {
+    scale: 1.05;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, .25);
+    background: rgb(50, 50, 50);
+    color: white;
 }

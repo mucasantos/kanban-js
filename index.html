@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="/css/style.css">
+   <link rel="stylesheet" href="./css/style.css">
     <title>Kanban board</title>
 </head>
 <body>
     <div class="board">
-        <form class="todo-form">
+        <form id="todo-form">
             <input type="text" placeholder="New TODO..." id="todo-input">
             <button type="submit">Novo +</button>
         </form>
@@ -19,6 +19,19 @@
 
                 <p class="task" draggable="true">Comprar comida</p>
                 <p class="task" draggable="true">Comprar comida</p>
+                <p class="task" draggable="true">Comprar comida</p>
+            </div>
+
+            <div class="swim-lane" id="todo-lane">
+                <h3 class="heading">Doing</h3>
+
+                <p class="task" draggable="true">Comprar comida</p>
+                <p class="task" draggable="true">Comprar comida</p>
+            </div>
+
+            <div class="swim-lane" id="todo-lane">
+                <h3 class="heading">Done</h3>
+
                 <p class="task" draggable="true">Comprar comida</p>
             </div>
         </div>
