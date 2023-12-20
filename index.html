@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./css/style.css">
+
     <title>Kanban board</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/drag.js" defer> </script>
+
 </head>
 <body>
     <div class="board">
@@ -22,20 +27,19 @@
                 <p class="task" draggable="true">Comprar comida</p>
             </div>
 
-            <div class="swim-lane" id="todo-lane">
+            <div class="swim-lane" >
                 <h3 class="heading">Doing</h3>
 
                 <p class="task" draggable="true">Comprar comida</p>
                 <p class="task" draggable="true">Comprar comida</p>
             </div>
 
-            <div class="swim-lane" id="todo-lane">
+            <div class="swim-lane">
                 <h3 class="heading">Done</h3>
 
                 <p class="task" draggable="true">Comprar comida</p>
             </div>
         </div>
     </div>
-    <script src="./js/drag.js"></script>
 </body>
 </html>
