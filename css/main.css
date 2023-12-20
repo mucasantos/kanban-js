@@ -38,6 +38,7 @@ input[type=text] {
 
 .kanban {
     display: flex;
+    flex-wrap: wrap;
     padding: 30px;
     border-radius: 5px;
 }
